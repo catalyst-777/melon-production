@@ -29,12 +29,15 @@ class Melon(object):
         else:
             return f"{self.color} {self.weight:.2f} lbs {self.melon_type}"
 
-# FIXME: Add Squash class definition here.
+
+# Add Squash class 
 class Squash(Melon):
     
+    # call super to inherit and initialize attributes of parent class Melon upon instantiation
     def __init__(self, melon_type):
         super().__init__(melon_type)
     
+    # create pain method that inherits Melon prep method as we all as has paint functionality
     def paint(self):
         super().prep
         robots.painterbot.paint(self)
